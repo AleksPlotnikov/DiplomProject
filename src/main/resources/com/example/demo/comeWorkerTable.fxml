@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="94.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ComeWorkerTableController">
+   <children>
+      <TextField fx:id="NameField" layoutX="8.0" layoutY="14.0" prefHeight="26.0" prefWidth="254.0" promptText="ФИО" />
+      <TextField fx:id="YearField" layoutX="268.0" layoutY="15.0" prefHeight="26.0" prefWidth="67.0" promptText="г/ржд" />
+      <TextField fx:id="PostField" layoutX="343.0" layoutY="15.0" prefHeight="26.0" prefWidth="110.0" promptText="Должность" />
+      <TextField fx:id="FactoryField" layoutX="463.0" layoutY="15.0" prefHeight="26.0" prefWidth="128.0" promptText="Подразделение" />
+      <Button fx:id="comeWorkerButton" layoutX="236.0" layoutY="53.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #F39C63;" text="Принять работника" />
+   </children>
+</AnchorPane>
