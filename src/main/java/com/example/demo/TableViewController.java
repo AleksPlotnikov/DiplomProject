@@ -59,9 +59,13 @@ public class TableViewController {
 
         FactoryTable.setItems(workersList);
     }
-    private void initData() {
+    public void initData() {
         workersList.add(new Workers("Банщиков Алексей Олегович", "1980", "Технолог", "Котельный цех"));
-        workersList.add(new Workers("Самарскй Егор Игоревич", "1977", "Слесарь", "Котельный цех"));
+        workersList.add(new Workers("Самарскй Егор Игоревич", "1977", "Технолог", "Котельный цех"));
+        workersList.add(new Workers("Килин Денис Иванович", "1973", "Слесарь", "Котельный цех"));
+        workersList.add(new Workers("Константинов Андрей Ильич", "1990", "Электрик", "Котельный цех"));
+        workersList.add(new Workers("Юшин Евгений Андреевич", "1986", "Слесарь", "Котельный цех"));
+        workersList.add(new Workers("Иванов Максим Викторович", "1993", "Сварщик", "Котельный цех"));
 
 
 
