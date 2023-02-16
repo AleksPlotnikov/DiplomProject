@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 public class TableViewController {
 
-    ObservableList<Workers> workersList = FXCollections.observableArrayList();
+    static ObservableList<Workers> workersList = FXCollections.observableArrayList();
     ComeWorkerTableController comeWorkerTableController = new ComeWorkerTableController();
     @FXML
     private ResourceBundle resources;
@@ -71,8 +71,17 @@ public class TableViewController {
 
             comeWorker.setOnAction(event -> {
                         comeWorker.getScene().getWindow();
-                        comeWorkerTableController.bananaFicus();
-
+                        FXMLLoader loaderComeWorker = new FXMLLoader();
+                        loaderComeWorker.setLocation(getClass().getResource("comeWorkerTable.fxml"));
+                        try {
+                            loaderComeWorker.load();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        Parent root = loaderComeWorker.getRoot();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(root));
+                        stage.showAndWait();
 
             }
 

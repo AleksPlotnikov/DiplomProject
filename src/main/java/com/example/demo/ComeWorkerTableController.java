@@ -40,26 +40,9 @@ public class ComeWorkerTableController {
     @FXML
     void initialize() {
 
+        comeWorkerButton.setOnAction(event -> {
+            TableViewController.workersList.add(new Workers(NameField.getText(),YearField.getText(),PostField.getText(),FactoryField.getText()));
 
-    }
-    public void bananaFicus() {
-        FXMLLoader loaderComeWorker = new FXMLLoader();
-        loaderComeWorker.setLocation(getClass().getResource("comeWorkerTable.fxml"));
-        try {
-            loaderComeWorker.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Parent root = loaderComeWorker.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.showAndWait();
-
-
-        TableViewController tableViewController = new TableViewController();
-
-            comeWorkerButton.setOnAction(event -> {
-            tableViewController.workersList.add(new Workers(NameField.getText(),YearField.getText(),PostField.getText(),FactoryField.getText()));
             }
             );
         }
