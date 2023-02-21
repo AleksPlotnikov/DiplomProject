@@ -1,9 +1,6 @@
 package com.example.demo;
 
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.Text;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TableViewControllerTest {
     TableViewController tableViewController = new TableViewController();
@@ -17,7 +14,7 @@ class TableViewControllerTest {
     }
     @Test
     void initData_AddWorkers(){
-        tableViewController.workersList.add(new Workers());
+        tableViewController.workersList.add(new Workers(WorkerRead.workerReadList()));
     }
     @Test
     void initData_TableBlank(){

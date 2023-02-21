@@ -1,12 +1,12 @@
 package com.example.demo;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 public class TableViewController {
 
-    static ObservableList<Workers> workersList = FXCollections.observableArrayList();
+    static ObservableList<Workers> workersList = FXCollections.observableArrayList(WorkerRead.workerReadList());
     ComeWorkerTableController comeWorkerTableController = new ComeWorkerTableController();
     @FXML
     private ResourceBundle resources;
@@ -31,7 +31,7 @@ public class TableViewController {
     private TableView<Workers> FactoryTable;
 
     @FXML
-    private TableColumn<?,?> NameWorker;
+    private TableColumn<?, ?> NameWorker;
 
     @FXML
     private TableColumn<?, ?> PostWorker;
@@ -50,6 +50,7 @@ public class TableViewController {
 
     @FXML
     void initialize() {
+
         initData();
 
         NameWorker.setCellValueFactory(new PropertyValueFactory<>("NameWorker"));
@@ -58,37 +59,37 @@ public class TableViewController {
         WorkShop.setCellValueFactory(new PropertyValueFactory<>("WorkShop"));
 
         FactoryTable.setItems(workersList);
+
     }
+
     public void initData() {
-        workersList.add(new Workers("Банщиков Алексей Олегович", "1980", "Технолог", "Котельный цех"));
-        workersList.add(new Workers("Самарскй Егор Игоревич", "1977", "Технолог", "Котельный цех"));
-        workersList.add(new Workers("Килин Денис Иванович", "1973", "Слесарь", "Котельный цех"));
-        workersList.add(new Workers("Константинов Андрей Ильич", "1990", "Электрик", "Котельный цех"));
-        workersList.add(new Workers("Юшин Евгений Андреевич", "1986", "Слесарь", "Котельный цех"));
-        workersList.add(new Workers("Иванов Максим Викторович", "1993", "Сварщик", "Котельный цех"));
 
+        comeWorkerMethod();
 
-
-            comeWorker.setOnAction(event -> {
-                        comeWorker.getScene().getWindow();
-                        FXMLLoader loaderComeWorker = new FXMLLoader();
-                        loaderComeWorker.setLocation(getClass().getResource("comeWorkerTable.fxml"));
-                        try {
-                            loaderComeWorker.load();
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                        Parent root = loaderComeWorker.getRoot();
-                        Stage stage = new Stage();
-                        stage.setScene(new Scene(root));
-                        stage.showAndWait();
-
-            }
-
-            );
-
-        }
     }
+
+    private void comeWorkerMethod() {
+        comeWorker.setOnAction(event -> {
+                    comeWorker.getScene().getWindow();
+                    FXMLLoader loaderComeWorker = new FXMLLoader();
+                    loaderComeWorker.setLocation(getClass().getResource("comeWorkerTable.fxml"));
+                    try {
+                        loaderComeWorker.load();
+
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    Parent root = loaderComeWorker.getRoot();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root));
+                    stage.showAndWait();
+
+                }
+
+        );
+    }
+}
+
 
 
 

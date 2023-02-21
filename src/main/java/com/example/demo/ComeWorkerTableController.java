@@ -41,7 +41,9 @@ public class ComeWorkerTableController {
     void initialize() {
 
         comeWorkerButton.setOnAction(event -> {
+
             TableViewController.workersList.add(new Workers(NameField.getText(),YearField.getText(),PostField.getText(),FactoryField.getText()));
+            WorkerWrite.WorkerWriterList();
 
             }
             );

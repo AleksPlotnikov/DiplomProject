@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class HelloController {
+public class HelloController{
 
     @FXML
     private ResourceBundle resources;

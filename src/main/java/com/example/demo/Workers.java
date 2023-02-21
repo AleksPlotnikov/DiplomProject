@@ -1,9 +1,9 @@
 package com.example.demo;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Workers {
+public class Workers implements Serializable {
     private String NameWorker;
     private String YearWorker;
     private String PostWorker;
@@ -19,7 +19,7 @@ public class Workers {
 
 
 
-    public Workers() {
+    public Workers(ArrayList<Workers> workers) {
     }
 
 
