@@ -7,6 +7,8 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -49,7 +51,7 @@ public class TableViewController {
     private Button removeWorker;
 
     @FXML
-    void initialize() {
+    void initialize() {                                             // Метод формирующий данные в таблице.
 
         initData();
 
@@ -59,16 +61,13 @@ public class TableViewController {
         WorkShop.setCellValueFactory(new PropertyValueFactory<>("WorkShop"));
 
         FactoryTable.setItems(workersList);
-
     }
-
-    public void initData() {
+    public void initData() {                                       // Метод позволяющий отображать работников в таблице.
 
         comeWorkerMethod();
-
+        removeWorker();
     }
-
-    private void comeWorkerMethod() {
+    private void comeWorkerMethod() {                                  // Метод вызывающий меню для приема работника.
         comeWorker.setOnAction(event -> {
                     comeWorker.getScene().getWindow();
                     FXMLLoader loaderComeWorker = new FXMLLoader();
@@ -83,9 +82,15 @@ public class TableViewController {
                     Stage stage = new Stage();
                     stage.setScene(new Scene(root));
                     stage.showAndWait();
-
-                }
-
+        }
+        );
+    }
+    private void removeWorker() {                                            // Метод удаляющий работника из таблицы.
+        removeWorker.setOnAction(event1 -> {
+                    int worker = FactoryTable.getSelectionModel().getSelectedIndex();
+                    FactoryTable.getItems().remove(worker);
+                    WorkerWrite.WorkerWriterList();
+        }
         );
     }
 }

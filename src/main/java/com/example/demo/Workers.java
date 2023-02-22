@@ -16,13 +16,8 @@ public class Workers implements Serializable {
         PostWorker = postWorker;
         WorkShop = workShop;
     }
-
-
-
     public Workers(ArrayList<Workers> workers) {
     }
-
-
     public String getNameWorker() {
         return NameWorker;
     }
@@ -54,7 +49,6 @@ public class Workers implements Serializable {
     public void setWorkShop(String workShop) {
         WorkShop = workShop;
     }
-
 }
 
 
