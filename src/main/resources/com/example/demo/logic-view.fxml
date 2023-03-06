@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -18,9 +19,9 @@
                 </Label>
             </children>
         </AnchorPane>
-        <Button fx:id="comeWorker" layoutX="488.0" layoutY="140.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Принять работника" textAlignment="CENTER" />
-      <Button fx:id="removeWorker" layoutX="488.0" layoutY="184.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Уволить работника" textAlignment="CENTER" />
-      <TableView fx:id="FactoryTable" layoutX="23.0" layoutY="140.0" prefHeight="200.0" prefWidth="440.0">
+        <Button fx:id="comeWorker" layoutX="488.0" layoutY="166.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Принять работника" textAlignment="CENTER" />
+      <Button fx:id="removeWorker" layoutX="488.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Уволить работника" textAlignment="CENTER" />
+      <TableView fx:id="FactoryTable" layoutX="23.0" layoutY="166.0" prefHeight="200.0" prefWidth="440.0">
         <columns>
           <TableColumn id="CotleFactory" fx:id="NameWorker" prefWidth="206.4000244140625" text="Имя" />
             <TableColumn id="CotleFactory" fx:id="YearWorker" prefWidth="71.20001220703125" text="Год Рожд" />
@@ -28,5 +29,10 @@
             <TableColumn fx:id="WorkShop" minWidth="0.0" prefWidth="89.60003662109375" text="Цех" />
         </columns>
       </TableView>
+      <TextField fx:id="searchBox" layoutX="46.0" layoutY="128.0" prefHeight="26.0" prefWidth="150.0" promptText="Поиск" />
+      <Button fx:id="closeButton" cancelButton="true" layoutX="23.0" layoutY="128.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="23.0" text="X" />
+      <Button fx:id="searchButton" layoutX="203.0" layoutY="128.0" mnemonicParsing="false" style="-fx-background-color: #F39C63;" text="Найти" />
+      <Button fx:id="sendOnVacationButton" layoutX="488.0" layoutY="259.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Отправить в отпуск" />
+      <Button fx:id="VacantList" layoutX="488.0" layoutY="303.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Лист отпусков" />
     </children>
 </AnchorPane>

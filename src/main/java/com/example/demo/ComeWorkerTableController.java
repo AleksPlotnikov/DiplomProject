@@ -44,7 +44,7 @@ public class ComeWorkerTableController {
             TableViewController.workersList.add(new Workers(NameField.getText(),YearField.getText(),
                     PostField.getText(),FactoryField.getText()));
                         WorkerWrite.WorkerWriterList();
-
+                        comeWorkerButton.getScene().getWindow().hide();
             }
             );
         }
