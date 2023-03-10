@@ -66,8 +66,11 @@ public class TableViewController {
     private Button VacantList;
 
     @FXML
-    void initialize() {                                             // Метод формирующий данные в таблице.
+    private Button WriteAllWorkers;
 
+    @FXML
+    void initialize() {                                             // Метод формирующий данные в таблице.
+        writeAllWorkersPDF();
         searchWorker();
         cleanSearchBox();
         initData();
@@ -85,6 +88,7 @@ public class TableViewController {
         comeWorkerMethod();
         removeWorker();
         sendWorkerVacantList();
+        writeAllWorkersPDF();
     }
 
     private void comeWorkerMethod() {                                  // Метод вызывающий меню для приема работника.
@@ -142,8 +146,12 @@ public class TableViewController {
                 FactoryTable.getItems().remove(worker);
                 WorkerVacantWrite.WorkerVacantWriterList();
                 WorkerWrite.WorkerWriterList();
+        });
+        }
 
-
+        public void writeAllWorkersPDF(){
+        WriteAllWorkers.setOnAction(event -> {
+            WriteAllWorkersPDF.writeAllWorkers();
         });
         }
 

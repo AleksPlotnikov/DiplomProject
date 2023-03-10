@@ -34,5 +34,6 @@
       <Button fx:id="searchButton" layoutX="203.0" layoutY="128.0" mnemonicParsing="false" style="-fx-background-color: #F39C63;" text="Найти" />
       <Button fx:id="sendOnVacationButton" layoutX="488.0" layoutY="259.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Отправить в отпуск" />
       <Button fx:id="VacantList" layoutX="488.0" layoutY="303.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Лист отпусков" />
+      <Button fx:id="WriteAllWorkers" layoutX="23.0" layoutY="391.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Распечатать список работников" textAlignment="CENTER" wrapText="true" />
     </children>
 </AnchorPane>
