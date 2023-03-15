@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import VacantList.VacantListController;
-import VacantList.WorkerVacantRead;
 import VacantList.WorkerVacantWrite;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -149,9 +148,9 @@ public class TableViewController {
         });
         }
 
-        public void writeAllWorkersPDF(){
+        public void writeAllWorkersPDF(){                                   // Метод для распечатки работников в текстовый документ.
         WriteAllWorkers.setOnAction(event -> {
-            WriteAllWorkersPDF.writeAllWorkers();
+            WriteAllWorkersTXT.writeAllWorkers();
         });
         }
 
