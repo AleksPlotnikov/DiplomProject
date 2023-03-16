@@ -1,5 +1,6 @@
-package com.example.demo;
+package WriteAndWorkingClasses;
 
+import com.example.demo.Workers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -18,19 +19,18 @@ public class WorkerWrite {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
 
-        try{
+        try {
             file = new File("WorkerFile");
-            if(!file.exists()){
+            if (!file.exists()) {
                 file.createNewFile();
             }
             fos = new FileOutputStream(file);
             oos = new ObjectOutputStream(fos);
-            oos.writeObject(new ArrayList<Workers>(workersList));
+            oos.writeObject(new ArrayList<>(workersList));
             oos.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
-        finally {
+        } finally {
             try {
                 fos.close();
                 oos.close();

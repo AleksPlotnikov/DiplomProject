@@ -7,4 +7,6 @@ module com.example.demo {
     exports com.example.demo;
     exports VacantList;
     opens VacantList to javafx.fxml;
+    exports WriteAndWorkingClasses;
+    opens WriteAndWorkingClasses to javafx.fxml;
 }

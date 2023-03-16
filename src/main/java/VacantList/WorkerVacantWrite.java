@@ -25,7 +25,7 @@ public class WorkerVacantWrite {
             }
             fos = new FileOutputStream(file);
             oos = new ObjectOutputStream(fos);
-            oos.writeObject(new ArrayList<Workers>(VacantListController.vacantList));
+            oos.writeObject(new ArrayList<>(VacantListController.vacantList));
             oos.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);

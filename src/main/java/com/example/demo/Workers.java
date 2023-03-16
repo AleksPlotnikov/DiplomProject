@@ -1,23 +1,24 @@
 package com.example.demo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Workers implements Serializable {
     private String NameWorker;
     private String YearWorker;
-    private String PostWorker;
+    public String PostWorker;
     private String WorkShop;
-
 
     public Workers(String nameWorker, String yearWorker, String postWorker, String workShop) {
         NameWorker = nameWorker;
         YearWorker = yearWorker;
         PostWorker = postWorker;
         WorkShop = workShop;
+
     }
-    public Workers(ArrayList<Workers> workers) {
+
+    public Workers() {
     }
+
     public String getNameWorker() {
         return NameWorker;
     }
@@ -49,6 +50,7 @@ public class Workers implements Serializable {
     public void setWorkShop(String workShop) {
         WorkShop = workShop;
     }
+
 }
 
 

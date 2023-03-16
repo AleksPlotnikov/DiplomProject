@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TableViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="644.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TableViewController">
     <children>
-        <AnchorPane prefHeight="106.0" prefWidth="640.0" style="-fx-background-color: #8B00FF; -fx-background-color: #423189;">
+        <AnchorPane prefHeight="106.0" prefWidth="644.0" style="-fx-background-color: #8B00FF; -fx-background-color: #423189;">
             <children>
                 <Label layoutX="126.0" layoutY="35.0" prefHeight="37.0" prefWidth="422.0" text="Система управления персоналом" textFill="#f4eded">
                     <font>
@@ -19,9 +19,9 @@
                 </Label>
             </children>
         </AnchorPane>
-        <Button fx:id="comeWorker" layoutX="488.0" layoutY="166.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Принять работника" textAlignment="CENTER" />
-      <Button fx:id="removeWorker" layoutX="488.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Уволить работника" textAlignment="CENTER" />
-      <TableView fx:id="FactoryTable" layoutX="23.0" layoutY="166.0" prefHeight="200.0" prefWidth="440.0">
+        <Button fx:id="comeWorker" layoutX="490.0" layoutY="166.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Принять работника" textAlignment="CENTER" />
+      <Button fx:id="removeWorker" layoutX="490.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Уволить работника" textAlignment="CENTER" />
+      <TableView fx:id="FactoryTable" layoutX="23.0" layoutY="166.0" prefHeight="200.0" prefWidth="444.0">
         <columns>
           <TableColumn id="CotleFactory" fx:id="NameWorker" prefWidth="206.4000244140625" text="Имя" />
             <TableColumn id="CotleFactory" fx:id="YearWorker" prefWidth="71.20001220703125" text="Год Рожд" />
@@ -32,8 +32,8 @@
       <TextField fx:id="searchBox" layoutX="46.0" layoutY="128.0" prefHeight="26.0" prefWidth="150.0" promptText="Поиск" />
       <Button fx:id="closeButton" cancelButton="true" layoutX="23.0" layoutY="128.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="23.0" text="X" />
       <Button fx:id="searchButton" layoutX="203.0" layoutY="128.0" mnemonicParsing="false" style="-fx-background-color: #F39C63;" text="Найти" />
-      <Button fx:id="sendOnVacationButton" layoutX="488.0" layoutY="259.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Отправить в отпуск" />
-      <Button fx:id="VacantList" layoutX="488.0" layoutY="303.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Лист отпусков" />
+      <Button fx:id="sendOnVacationButton" layoutX="490.0" layoutY="259.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Отправить в отпуск" />
+      <Button fx:id="VacantList" layoutX="490.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Лист отпусков" />
       <Button fx:id="WriteAllWorkers" layoutX="23.0" layoutY="391.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="130.0" style="-fx-background-color: #F39C63;" text="Распечатать список работников" textAlignment="CENTER" wrapText="true" />
     </children>
 </AnchorPane>

@@ -4,13 +4,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.demo.TableViewController;
-import com.example.demo.WorkerWrite;
+import WriteAndWorkingClasses.WorkerWrite;
 import com.example.demo.Workers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;

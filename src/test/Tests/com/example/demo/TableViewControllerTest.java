@@ -2,6 +2,9 @@ package com.example.demo;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 class TableViewControllerTest {
     TableViewController tableViewController = new TableViewController();
     @Test
@@ -14,7 +17,7 @@ class TableViewControllerTest {
     }
     @Test
     void initData_AddWorkers(){
-        tableViewController.workersList.add(new Workers(WorkerRead.workerReadList()));
+        tableViewController.workersList.add(new Workers());
     }
     @Test
     void initData_TableBlank(){
@@ -24,4 +27,37 @@ class TableViewControllerTest {
     void initData_Follow_comeWorkerTableController(){
         tableViewController.workersList.equals(tableViewController.comeWorkerTableController);
     }
+    @Test
+    void WorkerWriterListIfNotNull(){
+        FileWriter file = null;
+        try {
+            file = new FileWriter("WriteAllWorkers.txt");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        if (file != null) {
+            try {
+                file.write(String.valueOf(file));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+    @Test
+    void WorkerWriterListIfNull(){
+        FileWriter file = null;
+        try {
+            file = new FileWriter("WriteAllWorkers.txt");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        if(file == null){
+            try{
+                file.write(String.valueOf(file));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
 }

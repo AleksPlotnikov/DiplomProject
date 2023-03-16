@@ -1,4 +1,6 @@
-package com.example.demo;
+package WriteAndWorkingClasses;
+
+import com.example.demo.Workers;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,11 +13,11 @@ public class WorkerRead {
 
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-        ArrayList <Workers> worker;
+        ArrayList<Workers> worker;
         try {
             fis = new FileInputStream("WorkerFile");
             ois = new ObjectInputStream(fis);
-           worker = (ArrayList<Workers>) ois.readObject();
+            worker = (ArrayList<Workers>) ois.readObject();
 
 
         } catch (FileNotFoundException e) {

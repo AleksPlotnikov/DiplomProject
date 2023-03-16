@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 
 import VacantList.VacantListController;
 import VacantList.WorkerVacantWrite;
+import WriteAndWorkingClasses.WorkerRead;
+import WriteAndWorkingClasses.WorkerWrite;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,7 +21,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class TableViewController {
+import static WriteAndWorkingClasses.WriteAllWorkersTXT.writeAllWorkers;
+
+public class TableViewController{
 
     public static ObservableList<Workers> workersList = FXCollections.observableArrayList(WorkerRead.workerReadList());
     ComeWorkerTableController comeWorkerTableController = new ComeWorkerTableController();
@@ -46,6 +50,7 @@ public class TableViewController {
     @FXML
     private TableColumn<?, ?> YearWorker;
 
+
     @FXML
     private Button comeWorker;
 
@@ -69,7 +74,7 @@ public class TableViewController {
 
     @FXML
     void initialize() {                                             // Метод формирующий данные в таблице.
-        writeAllWorkersPDF();
+        writeAllWorkers();
         searchWorker();
         cleanSearchBox();
         initData();
@@ -87,7 +92,7 @@ public class TableViewController {
         comeWorkerMethod();
         removeWorker();
         sendWorkerVacantList();
-        writeAllWorkersPDF();
+        writeAllWorkersTXT();
     }
 
     private void comeWorkerMethod() {                                  // Метод вызывающий меню для приема работника.
@@ -148,9 +153,9 @@ public class TableViewController {
         });
         }
 
-        public void writeAllWorkersPDF(){                                   // Метод для распечатки работников в текстовый документ.
+        public void writeAllWorkersTXT(){                                   // Метод для распечатки работников в текстовый документ.
         WriteAllWorkers.setOnAction(event -> {
-            WriteAllWorkersTXT.writeAllWorkers();
+            writeAllWorkers();
         });
         }
 
