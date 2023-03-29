@@ -19,3 +19,4 @@ CREATE table Faculties(id int NOT NULL PRIMARY KEY,
 CREATE table EmploymentDate(date int NOT NULL,
 							Name nvarchar(max) NOT NULL
 							);
+							.
